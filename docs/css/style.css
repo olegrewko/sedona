@@ -58,7 +58,7 @@ h1 {
   padding: 0px;
   /* border: 1px solid red; */
   display: grid;
-  grid-template-columns: 105px 450px 1fr;
+  grid-template-columns: 100px 500px 600px;
   column-gap: 0px;
 }
 .grid-h {
@@ -66,12 +66,46 @@ h1 {
   grid-template-columns: 1fr 300px 300px ;
   column-gap: 0px;
 }
+.container-hero {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.grid {
+  /* width: 1200px; */
+  display: grid;
+  grid-template-columns: 400px 400px 400px ;
+  grid-template-rows: 384px 384px 384px 384px;
+  gap: 0px;
+}
+/* .card1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+}
+.card2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background-color: green;
+} */
+.grid > div:nth-child(1){
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.grid > div:nth-child(2){
+  grid-column-start: 2;
+  grid-column-end: -1;
+}
+.grid > div:nth-child(6){
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
 .grid-hero_2 {
+  /* margin-top: 10px; */
   display: grid;
   grid-template-columns: 200px 70px 200px 70px  350px 10px 250px ;
-  column-gap: 5px;
+  column-gap: 0px;
   color: white;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-left: 50px;
   /* font-weight: 400; */
 }
@@ -137,6 +171,8 @@ h1 {
 .hero {
   margin-top: 10px;
   height: 485px;
+  max-width: 1200px;
+
 }
 .grey {
   color: grey;
@@ -196,8 +232,14 @@ h1 {
 	background-position: center;
 
 }
+.newsletter-content02 {
+ height: 485px;
+
+
+}
 .newsletter-content-h {
- height: 411px;
+ height: 485px;
+ margin-top: -20px;
 
 	background-image: url("./../img/background-holels.png");
 	background-size: cover;
@@ -212,6 +254,13 @@ h1 {
 .white {
   padding-top: 150px;
   color: whitesmoke;
+  font-size: 2rem;
+  text-transform: uppercase;
+  z-index: 1;
+}
+.black {
+  padding-top: 150px;
+  color: black;
   font-size: 2rem;
   text-transform: uppercase;
   z-index: 1;
@@ -413,7 +462,7 @@ a {
 
 .product {
 	width: 300px; /* для удобства */
-	height: 438px
+	/* height: 338px; */
 	border: 1px solid #d9d9d9;
 	border-radius: 4px;
 	padding:0px;
@@ -640,7 +689,7 @@ a {
 .container {
 
 	width: 1200px;
-	height: 1212px;
+	height: 1000px;
 	padding: 0 0px;
 	margin: 0 auto;
 }
