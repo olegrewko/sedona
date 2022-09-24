@@ -31,6 +31,9 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+.image__img {
+  width: 100%;
+}
 .title {
   /* border-left: 20px solid #e2e2e2; */
   /* margin-left: auto;
@@ -51,11 +54,11 @@ h1 {
   font-weight: 400;
 }
 .navigation {
-  height: 90px;
+  height: 100px;
   padding: 0px;
   /* border: 1px solid red; */
   display: grid;
-  grid-template-columns: 95px 450px 1fr;
+  grid-template-columns: 105px 450px 1fr;
   column-gap: 0px;
 }
 .grid-h {
@@ -65,29 +68,33 @@ h1 {
 }
 .grid-hero_2 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr ;
-  column-gap: 0px;
+  grid-template-columns: 200px 70px 200px 70px  350px 10px 250px ;
+  column-gap: 5px;
   color: white;
   padding-top: 20px;
   padding-left: 50px;
-  font-weight: 700;
+  /* font-weight: 400; */
 }
 
 .navigation-item {
   /* border: 2px solid maroon; */
   margin: 0px;
+  padding: 2px;
+
 }
 .navigation-list {
-  margin-bottom: 00px;
+  margin-left: 70px;
+  margin-top: 10px;
   padding-bottom: 00px;
   /* border: 1px solid green; */
- /* width: 500px; */
+ height: 2rem;
+
 }
 .flex-container {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
-   align-items: flex-start;
+  justify-content: space-around;
+   align-items: flex-end;
 }
 .flex-container-icon {
   display: flex;
@@ -102,11 +109,12 @@ h1 {
 
 }
 .navigation-link {
-  width: 90px;
+  width: 100px;
   margin: 0px;
-  padding: 10px;
+  padding: 5px;
   /* background-color: tomato; */
   display: block;
+  font-weight: 700;
 }
 .navigation-logo {
  width: 155px;
@@ -154,7 +162,7 @@ h1 {
 }
 
 .header{
-  height: 32px;
+  height: 45px;
   /* background-color: burlywood; */
   flex-grow: 0; /*Запрещаем увеличиваться*/
   flex-shrink: 0; /*Запрещаем сжиматься*/
@@ -190,11 +198,16 @@ h1 {
 }
 .newsletter-content-h {
  height: 411px;
+
 	background-image: url("./../img/background-holels.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 
+}
+.wrap {
+  width: 1050px;
+  height: 200px;
 }
 .white {
   padding-top: 150px;
@@ -204,8 +217,8 @@ h1 {
   z-index: 1;
 }
 .white-h {
-  padding-top: 70px;
-  padding-left: 50px;
+  padding-top: 50px;
+  padding-left: 40px;
   color: whitesmoke;
   font-size: 3.5rem;
   font-weight: 700;
@@ -218,10 +231,21 @@ h1 {
   font-size: 1.1rem;
 
 }
+.white-min {
+  margin-top: 1rem;
+  padding: 5px;
+  color: whitesmoke;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: center;
+
+}
 .subscribe-form__field {
-  margin-top: 20px;
-  width: 600px;
-  height: 50px;
+  margin-top: 40px;
+  margin-right: -6px;
+  width: 620px;
+  height: 55px;
+  border:  2px 0 0 2px;
 
 
 
@@ -232,10 +256,10 @@ h1 {
 
 .subscribe-form__btn {
   height: 55px;
-  width: 160px;
+  width: 180px;
   color: white;
   background-color: #82b3d3;
-  border-radius: 2px;
+  border-radius: 0 2px 2px 0px;
   border: none;
 
 }
@@ -285,6 +309,13 @@ flex-container-social {
 
 
 }
+.button-h {
+  padding-top: 90px;
+  padding-left: 40px;
+  font-weight: 400;
+
+
+}
 .select-hc {
   margin-top: 18px;
  width: 250px;
@@ -296,10 +327,11 @@ flex-container-social {
 }
 .min {
 
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 .min-checkbox {
+
   padding-top: 10px;
   margin-left: 5px;
   font-size: 0.9rem;
@@ -310,8 +342,10 @@ flex-container-social {
   margin-left: -5px;
 }
 .option {
+  margin-top: 10px;
   display: block;
-  margin-bottom: 0.25 rem;
+  margin-bottom: 0 rem;
+  height: 20px;
 }
 /* ************************************************************ */
 
@@ -369,12 +403,12 @@ a {
 
 
 .product {
-	width: 340px; /* для удобства */
+	width: 300px; /* для удобства */
 	height: 438px
 	border: 1px solid #d9d9d9;
 	border-radius: 4px;
-	padding:20px;
-	padding-top: 10px;
+	padding:0px;
+	margin-top: 50px;
 	font-size: 14px;
 	background-color: #fff;
 }
@@ -383,8 +417,8 @@ a {
 	position: relative;
 	overflow: hidden;
 	display: block;
-	/* height: 211px;
-  width: 300px; */
+	/* height: 211px; */
+  width: 400px;
 }
 
 .image-switch {
@@ -471,7 +505,7 @@ a {
 	display: grid;
   grid-template-columns: 1fr 1fr  ;
   grid-template-rows: 50px 50px 50px  ;
-  gap: 10px;
+  gap: 5px;
 
 
 
@@ -538,7 +572,7 @@ a {
 	border: none;
 	padding: 14px 0;
 	border-radius: 2px;
-	width: 100%;
+	width: 150px;
 	color: #fff;
 
 	background-color: grey;
@@ -549,7 +583,7 @@ a {
 	border: none;
 	padding: 14px 0;
 	border-radius: 2px;
-	width: 100%;
+	width: 150px;
 	color: #fff;
 
 	background-color: brown;
@@ -560,10 +594,10 @@ a {
 	border: none;
 	padding: 14px 0;
 	border-radius: 2px;
-	width: 100%;
+	width: 150px;
 	color: #fff;
 
-	background-color: blue;
+	background-color: #82b3d3;
 	cursor: pointer;
 	transition: background-color 0.3s ease-in-out;
 }
@@ -669,7 +703,16 @@ a {
 
 .pagination a:hover:not(.active) {background-color: #ddd;}
 
+.box {
+  margin-top: 2rem;
+  height: 2.5rem;
+  width: 10rem;
+  border: 1px solid white;
+  border-radius: 2px;
+  background-color: transparent;
+  padding: 10px;
 
-/*  */
-
-
+}
+.r2 {
+  margin-top: 2rem;
+}

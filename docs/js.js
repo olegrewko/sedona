@@ -37,3 +37,15 @@ button.addEventListener('click', function() {
     button.innerText = 'В ИЗБРАННОЕ';
   }
 });
+// input
+document.querySelector('button').onclick = () => {
+  console.log(document.querySelector('#one').value);
+  //style
+  document.querySelector('button').style.backgroundColor =
+  document.querySelector('#one').value
+}
+document.querySelector('#one').oninput = () => {
+  console.log(document.querySelector('#one').value);
+  document.querySelector('#d').innerHTML =
+  document.querySelector('#one').value
+}
