@@ -23,6 +23,7 @@
    <link rel="stylesheet" href="navigation-outline.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <!-- <script src="jquery.js"></script> -->
     <title>sedona</title>
   </head>
   <body>
@@ -39,6 +40,7 @@
       </div>
   </div> -->
 <!--  -->
+
 <div class="header">
     <nav class="navigation ">
     <div class="navigation-logo ">
@@ -72,7 +74,7 @@
       </a>
     </li>
     <li class="navigation-icon">
-      <a class="navigation-icon-link" href="#">
+      <a class="navigation-icon-link" href="#popup">
         <img class="mt-5" src="img/button.png" alt="Избранное" width="160" height="37">
       </a>
     </li>
@@ -135,7 +137,7 @@
 </div>
   <div class="dummy"></div>
  <div class="title">
-  <a href=""> <button class=" search__btn"><span class="white-p">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</span></button></a>
+  <a href="#popup"> <button class=" search__btn"><span class="white-p">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</span></button></a>
 
 </div>
 
@@ -184,18 +186,70 @@
 </div>
 </div>
 
+
+<div id="popup" class="popup">
+  <a href="#header" class="popup-area"></a>
+  <div class="popup__body">
+    <div class="popup__content">
+
+      <div class="popup__title"><h3 class="">ПОИСК ГОСТИННИЦЫ В СЕДОНЕ
+        <a href="./index_hotels.html" class="popup__close">X</a></h3>
+      </div>
+      <div class="popup__text">
+
+        <form>
+          <div>
+            <label for="uname">Дата заезда: </label>
+            <input
+              type="date"
+              id="uname"
+              name="name"
+              class="colortext"
+              size="25" />
+          </div>
+          <div>
+            <label for="uname">Дата выезда: </label>
+            <input
+              type="date"
+              id="uname"
+              name="name"
+              class="colortext"
+              size="25" />
+          </div>
+
+        </form>
+        <div class="details-wrapper">
+          <div>Взрослые:</div>
+          <div class="items counter-wrapper">
+            <div class="items__control" data-action="minus">-</div>
+            <div class="items__current" data-counter>1</div>
+            <div class="items__control" data-action="plus">+</div>
+          </div>
+          <div>Дети:</div>
+
+          <div class="items counter-wrapper">
+            <div>
+            <a class="link-tooltip" href="#" title="Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.">
+            <img    src="./img/info.png" width="25" height="25">
+            </a>
+            </div>
+            <div class="items__control" data-action="minus">-</div>
+            <div class="items__current" data-counter>1</div>
+            <div class="items__control" data-action="plus">+</div>
+          </div>
+
+
+        </div>
+
+
+
+      </div>
+      <button class="i__btn-popup">НА ОФОРМЛЕНИЕ</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<script src="counter.js"></script>
   </body>
 </html>
-<!-- Кроссбраузерность
-Chrome: последняя стабильная версия.
-Firefox: последняя стабильная версия.
-Safari: последняя стабильная версия (для студентов с macOS).
-ОБЩИЕ ТРЕБОВАНИЯ
-При нехватке контента страницы подвал прижат к низу страницы.
-Модальные окна должны позиционироваться относительно видимой части экрана.
-Иконки социальных сетей в футере ведут на профили .html academy:
-Vkontakte — https://vk.com/htmlacademy
-Telegram — https://t.me/htmlacademy
-Youtube — https://www.youtube.com/user/htmlacademyru
-Логотип .html academy ведёт на главную страницу сайта разработчика — https://htmlacademy.ru/
-Оживлять макет не нужно, нужн а только вёрстка. -->

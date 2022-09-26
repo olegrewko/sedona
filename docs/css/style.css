@@ -21,15 +21,19 @@ html {
   height: 100%;
   font-size: 100%;
 }
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 body {
   height: 100%;
   font-family: 'PT Sans ', sans-serif;
   font-weight: 400;
   margin: 0;
-  padding-right: 20px;
-  padding-left: 20px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 0px;
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 .image__img {
   width: 100%;
@@ -54,7 +58,7 @@ h1 {
   font-weight: 400;
 }
 .navigation {
-  height: 100px;
+  height: 50px;
   padding: 0px;
   /* border: 1px solid red; */
   display: grid;
@@ -171,7 +175,9 @@ h1 {
 .hero {
   margin-top: 10px;
   height: 485px;
-  max-width: 1200px;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 .grey {
@@ -198,6 +204,9 @@ h1 {
 }
 
 .header{
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   height: 45px;
   /* background-color: burlywood; */
   flex-grow: 0; /*Запрещаем увеличиваться*/
@@ -209,7 +218,7 @@ h1 {
     flex: 1 1 auto;
     /* background-color: aliceblue; */
     overflow-y:auto; /*Вертикальная полоса прокрутки для текста*/
-    padding: 5px; /*отступы текста со всех сторон*/
+    padding: 0px; /*отступы текста со всех сторон*/
     text-align: justify; /*выравнивание текста по левому и правому краям*/
     /* flex-grow: 1; Предписываем занять все свободное пространство */
 }
@@ -659,6 +668,19 @@ a {
 	cursor: pointer;
 	transition: background-color 0.3s ease-in-out;
 }
+.i__btn-popup {
+  margin-top: 1rem;
+  font-weight: 700;
+	border: none;
+	padding: 14px 0;
+	border-radius: 2px;
+	width: 400px;
+	color: #fff;
+
+	background-color: #82b3d3;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
 
 .product__btn:hover {
 	/* background-color: #6078f1; */
@@ -796,4 +818,150 @@ a {
 }
 .pagination-info {
   text-align: right;
+}
+/*popup****************************************  */
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(200, 200, 200, 0.9);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.popup:target {
+
+  opacity: 1;
+  visibility: visible;
+}
+.popup__body {
+  height: 100%;
+
+  display: flex;
+  padding: 30px 10px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.8s ease 0s;
+}
+.popup-area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(200, 200, 200, 0.2);
+  top: 0;
+  left: 0;
+}
+.popup__content {
+  height: 400px;
+  width: 500px;
+  background-color: white;
+  color: black;
+
+  padding: 20px;
+  border-radius: 20px;
+  z-index: 1;
+
+
+}
+.popup__close {
+  margin-left: 1rem;
+}
+.popup__title {
+ margin-top: 2rem;
+ text-align: center;
+
+}
+.popup__text {
+  margin-top: 2rem;
+  height: 200px;
+  width: 400px;
+  /* background-color: whitesmoke; */
+  text-align: center;
+  font-weight: 700;
+}
+/*popup****************************************  */
+.colortext {
+  background-color: lightgrey; /* Цвет фона */
+  color: #black; /* Цвет текста */
+ }
+#uname{
+  height: 3rem;
+  width: 15rem;
+  padding: 5px;
+  margin: 10px;
+}
+.item-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+font-family: 'Merriweather', serif;
+height: 70px;
+}
+
+.details-wrapper {
+display: flex;
+justify-content: space-around;
+align-items: center;
+/* margin-bottom: 25px; */
+width: 90%;
+
+margin-top: 1rem;
+margin-left: auto;
+margin-right: auto;
+}
+
+.items {
+/* font-family: 'Merriweather', serif; */
+/* background: #f2ede7; */
+border-radius: 2px;
+width: 120px;
+display: flex;
+font-size: 18px;
+height: 30px;
+overflow: hidden;
+}
+
+.items__control {
+  background: #f2ede7;
+width: 40px;
+cursor: pointer;
+transition: 0.2s ease-in;
+text-align: center;
+}
+
+.items__control:hover {
+  background: #eb5a1e;
+  color: #FFF;
+}
+
+.items__current {
+  background: #f2ede7;
+width: 40px;
+}
+#floatTip {
+  position: absolute; /* Абсолютное позиционирование */
+  width: 250px; /* Ширина блока */
+  display: none; /* Прячем от показа */
+  border: 1px solid #000; /* Параметры рамки */
+  padding: 4px; /* Поля вокруг  текста */
+  font-family: sans-serif; /* Рубленый шрифт */
+  font-size: 9pt; /* Размер  шрифта */
+  color: #ffffff; /* Цвет текста */
+  background: #333333; /* Цвет фона */
+}
+title {
+  height: 110px;
+  width: 216px;
+}
+.tooltip-custom {
+  position: absolute;
+  z-index: 999;
+  /* left: -9999px; */
+  color: #ffffff; /* Цвет текста */
+  background-color: #333333;
+  padding: 7px 10px;
+  border: 1px solid blue;
+  border-radius: 5px;
+  height: 110px;
+  width: 216px;
 }

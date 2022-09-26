@@ -49,3 +49,67 @@ document.querySelector('#one').oninput = () => {
   document.querySelector('#d').innerHTML =
   document.querySelector('#one').value
 }
+// *************************************************
+// // const btnMinus = document.querySelector('[data-action="minus"]');
+// // const btnPlus = document.querySelector('[data-action="plus"]');
+// // const counter = document.querySelector('[data-counter]');
+
+// window.addEventListener('click', function (event){
+//   const counterWrapper = event.target.closest('.counter-wrapper');
+//   const counter = counterWrapper.querySelector('[data-counter]');
+//   // const counter = document.querySelector('[data-counter]');
+
+//   console.log('click window');
+//   console.log(event.target.dataset.action );
+
+//   if(event.target.dataset.action === 'plus'){
+//       console.log('plus' );
+//       // const counterWrapper = event.target.closest('.counter-wrapper');
+//       console.log(counterWrapper);
+//       // const counter = counterWrapper.querySelector('[data-counter]');
+//       console.log(counter);
+
+//       // btnPlus.addEventListener('click', function() {
+//           // if (parseInt(counter.innerText) > 1) {
+//           counter.innerText = ++counter.innerText;
+//           // }
+//       // });
+
+//   }
+//   if(event.target.dataset.action === 'minus'){
+//       console.log('minus' );
+
+//       console.log(counterWrapper);
+
+//       console.log(counter);
+
+
+//       // btnMinus.addEventListener('click', function() {
+//           // if (parseInt(counter.innerText) > 1) {
+//               counter.innerText = --counter.innerText;
+//           // }
+
+//       // });
+
+//       }
+
+// });
+// function showTooltip(targetItems, name){
+//   $(targetItems).each(function(i){
+//     var badgeDescription = $(this).attr('title');
+//     $('body').append("<div class='"+ name +"' id='"+ name + i +"'>"+ badgeDescription +"</div>");
+
+//     var tooltip = $('#'+name+i);
+//     $(this).removeAttr("title").mouseenter(function(){
+//       tooltip.css({opacity:0.9, display:'none'}).fadeIn();
+//     }).mousemove(function(kmouse){
+//       tooltip.css({left:kmouse.pageX+15, top:kmouse.pageY+15});
+//     }).mouseleave(function(){
+//       tooltip.fadeOut();
+//     });
+//   });
+// }
+
+// $(document).ready(function(){
+//   showTooltip('.link-tooltip', 'tooltip-custom');
+// });
