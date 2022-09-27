@@ -127,6 +127,17 @@ h1 {
   }
 
 }
+@media (max-width: 400px) {
+  .grid {
+
+    display: grid;
+    grid-template-columns: repeat(1, 400px);
+    /* grid-template-rows: repeat(6, 384px); */
+    gap: 0px;
+  }
+ 
+
+}
 .grid-hero_2 {
   min-height: 350px;
   display: grid;
@@ -401,7 +412,17 @@ h1 {
     grid-template-columns: repeat(1, 300px);
     /* grid-template-rows: repeat(6, 384px); */
     gap: 0px;
-    font-size: 1.5rem;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 700px) {
+  .button, .search__btn {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    margin-bottom: 0;
+    width: 300px;
   }
 }
 .logo_h {
