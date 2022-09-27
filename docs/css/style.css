@@ -1017,12 +1017,13 @@ a {
 
 }
 .popup__close {
-  margin-left: 1rem;
+  margin-left: 6rem;
 }
 .popup__title {
  margin-top: 2rem;
  margin-left: 2rem;
  text-align: left;
+ font-weight: 700;
 
 }
 .popup__text {
