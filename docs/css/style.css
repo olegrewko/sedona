@@ -36,7 +36,7 @@ body {
   margin-right: auto; */
 }
 .image__img {
-  width: 100%;
+  max-width: 100%;
 }
 .title {
   /* border-left: 20px solid #e2e2e2; */
@@ -128,7 +128,7 @@ h1 {
 
 }
 .grid-hero_2 {
-  min-height: 600px;
+  min-height: 350px;
   display: grid;
   grid-template-columns: repeat(4, 200px ) ;
   column-gap: 50px;
@@ -142,7 +142,16 @@ h1 {
     column-gap: 50px;
     display: grid;
     grid-template-columns: repeat(2, 200px);
-    /* /* grid-template-rows: repeat(6, 384px); */
+
+
+  }
+}
+@media (max-width: 500px) {
+  .grid-hero_2 {
+    column-gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(1, 200px);
+
 
   }
 }
@@ -280,7 +289,7 @@ h1 {
 
 }
 .newsletter-content-h {
- /* min-height: 485px; */
+ min-height: 485px;
  margin-top: -20px;
 
 	background-image: url("./../img/background-holels.png");
@@ -368,11 +377,32 @@ h1 {
   grid-template-columns: 195px  1fr 195px;
   column-gap: 0px;
 }
+@media (max-width: 700px) {
+  .grid-footer {
+
+    display: grid;
+    grid-template-columns: repeat(1, 300px);
+    /* grid-template-rows: repeat(6, 384px); */
+    gap: 0px;
+    font-size: 1rem;
+  }
+}
+
 .flex-container-social {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-   align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: center;
+   align-items: center;
+}
+@media (max-width: 700px) {
+  .flex-container-social, h1 {
+
+    display: grid;
+    grid-template-columns: repeat(1, 300px);
+    /* grid-template-rows: repeat(6, 384px); */
+    gap: 0px;
+    font-size: 1.5rem;
+  }
 }
 .logo_h {
   margin-top: 20px;
@@ -514,9 +544,9 @@ a {
 
 .product {
 	width: 300px; /* для удобства */
-	/* height: 338px; */
-	border: 1px solid #d9d9d9;
-	border-radius: 4px;
+	min-height: 500px;
+	border: 0px solid #d9d9d9;
+
 	padding:0px;
 	margin-top: 50px;
 	font-size: 14px;
@@ -528,7 +558,7 @@ a {
 	overflow: hidden;
 	display: block;
 	/* height: 211px; */
-  width: 400px;
+  width: 300px;
 }
 
 .image-switch {
@@ -613,7 +643,7 @@ a {
 
 .product__props {
 	display: grid;
-  grid-template-columns: 1fr 1fr  ;
+  grid-template-columns: 150px 150px  ;
   grid-template-rows: 50px 50px 50px  ;
   gap: 5px;
 
@@ -682,7 +712,7 @@ a {
 	border: none;
 	padding: 14px 0;
 	border-radius: 2px;
-	width: 150px;
+	width: 140px;
 	color: #fff;
 
 	background-color: grey;
@@ -693,7 +723,7 @@ a {
 	border: none;
 	padding: 14px 0;
 	border-radius: 2px;
-	width: 150px;
+	width: 140px;
 	color: #fff;
 
 	background-color: brown;
@@ -704,7 +734,7 @@ a {
 	border: none;
 	padding: 14px 0;
 	border-radius: 2px;
-	width: 150px;
+	width: 140px;
 	color: #fff;
 
 	background-color: #82b3d3;
@@ -789,6 +819,7 @@ a {
 
 .grid-container {
 	max-width: 1200px;
+  margin: 0 auto;
 	display: grid;
 	grid-gap: 0px;
 	grid-template-columns:  repeat(3, 400px);
