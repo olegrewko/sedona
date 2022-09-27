@@ -97,7 +97,7 @@ h1 {
 .grid {
 
   display: grid;
-  grid-template-columns: repeat(3, 400px) ;
+  grid-template-columns: repeat(3, minmax(300px, 400px)) ;
   grid-template-rows: repeat(4, 384px);
   gap: 0px;
 }
@@ -179,7 +179,7 @@ h1 {
 .navigation-item {
   /* border: 2px solid maroon; */
   margin: 0px;
-  padding: 2px;
+  padding: 5px;
 
 }
 .navigation-list {
@@ -192,14 +192,14 @@ h1 {
 }
 .flex-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
    align-items: center;
 }
 .flex-container-icon {
   margin-top: 40px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: fcenter;
 }
@@ -797,11 +797,13 @@ a {
 }
 .i__btn-popup {
   margin-top: 1rem;
+  margin-left: 2rem;
   font-weight: 700;
 	border: none;
 	padding: 14px 0;
-	border-radius: 2px;
-	width: 400px;
+	border-radius: 4px;
+	/* width: 20rem;!important; */
+	width: 430px;
 	color: #fff;
 
 	background-color: #82b3d3;
@@ -1004,7 +1006,7 @@ a {
 }
 .popup__content {
   height: 400px;
-  width: 500px;
+  width: 600px;
   background-color: white;
   color: black;
 
@@ -1019,13 +1021,14 @@ a {
 }
 .popup__title {
  margin-top: 2rem;
- text-align: center;
+ margin-left: 2rem;
+ text-align: left;
 
 }
 .popup__text {
   margin-top: 2rem;
   height: 200px;
-  width: 400px;
+  width: 500px;
   /* background-color: whitesmoke; */
   text-align: center;
   font-weight: 700;
@@ -1037,9 +1040,11 @@ a {
  }
 #uname{
   height: 3rem;
-  width: 15rem;
+  width: 20rem;
   padding: 5px;
   margin: 10px;
+  border-radius: 4px;
+  font-family: inherit;
 }
 .item-title {
   font-size: 1.5rem;
@@ -1071,12 +1076,22 @@ height: 30px;
 overflow: hidden;
 }
 
-.items__control {
-  background: #f2ede7;
-width: 40px;
+.items__control, .items__current {
+  background-color: #f2ede7;
+/* width: 50px;
+height: 50px */
 cursor: pointer;
 transition: 0.2s ease-in;
-text-align: center;
+/* align-items: center;
+vertical-align: middle; */
+
+color: black;
+/* float: left; */
+padding: 4px 12px 0px 12px;
+text-decoration: none;
+transition: background-color .3s;
+border: 0px solid #ddd;
+margin: 0 0px;
 }
 
 .items__control:hover {
@@ -1084,10 +1099,10 @@ text-align: center;
   color: #FFF;
 }
 
-.items__current {
+/* .items__current {
   background: #f2ede7;
 width: 40px;
-}
+} */
 #floatTip {
   position: absolute; /* Абсолютное позиционирование */
   width: 250px; /* Ширина блока */
