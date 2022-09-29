@@ -226,10 +226,23 @@
           <div>Дети:</div>
 
           <div class="items counter-wrapper">
-            <div>
-            <a class="link-tooltip" href="#" title="Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.">
+            <div >
+              <div class="tooltip-2">
+                <div class="button" id="button-2" aria-describedby="tooltip-2" aria-label="Я - кнопка">
+
+            <!-- <a class="link-tooltip" href="#" title="Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно."> -->
             <img    src="./img/info.png" width="25" height="25">
-            </a>
+            <!-- </a> -->
+                <!-- </div> -->
+            <!-- <div class="tooltip-text" role="tooltip" id="tooltip-1">
+              Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+            </div> -->
+          </div>
+          <div id="tooltip-2" role="tooltip" class="tooltip-2-text">
+            Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.
+             Дети до 6 лет размещаются бесплатно.
+          </div>
+          </div>
             </div>
             <div class="items__control" data-action="minus">-</div>
             <div class="items__current" data-counter>1</div>
@@ -248,6 +261,17 @@
     </div>
   </div>
 </div>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script>
+  const button = document.querySelector('#button-2');
+  const tooltip = document.querySelector('#tooltip-2');
+
+  // Pass the button, the tooltip, and some options, and Popper will do the
+  // magic positioning for you:
+  Popper.createPopper(button, tooltip, {
+    placement: 'bottom',
+  });
+</script>
 <script src="counter.js"></script>
   </body>
 </html>
