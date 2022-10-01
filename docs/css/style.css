@@ -769,7 +769,7 @@ a {
 	width: 140px;
 	color: #fff;
 
-	background-color: #82b3d3;
+	background-color: rgb(130, 179, 211);
 	cursor: pointer;
 	transition: background-color 0.3s ease-in-out;
 }
