@@ -1164,12 +1164,40 @@ title {
 	width: 250px;
   font-weight: 400;
   font-size: 1rem;
+
 }
 
 .tooltip-2:hover + .tooltip-text,
 .tooltip-2:focus + .tooltip-text {
 	opacity: 1;
 	visibility: visible;
+
+
+}
+/* .tooltip-2-text::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+height: 0;
+border-style: solid;
+border-width: 0 7.5px 10px 7.5px;
+border-color: transparent transparent #fff transparent;
+
+} */
+.tooltip-2-text::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  width: 0;
+height: 0;
+
+transform: translateX(-50%);
+border-style: solid;
+border-width: 0 7.5px 10px 7.5px;
+border-color: transparent transparent #333 transparent;
 
 }
 .tooltip-2::after {
