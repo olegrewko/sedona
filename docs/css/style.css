@@ -27,13 +27,16 @@ html {
 	box-sizing: border-box;
 }
 body {
-  height: 100%;
+  width: 1920px;
+  height: 1080px;
   font-family: 'PT Sans ', sans-serif;
   font-weight: 400;
-  margin: 0;
+  margin: 0 auto;
   padding: 0px;
-  /* margin-left: auto;
-  margin-right: auto; */
+  position: relative;
+  line-height: 30px;
+  /* background-color: tomato; */
+  /* overflow: hidden; */
 }
 .image__img {
   max-width: 100%;
@@ -58,27 +61,50 @@ h1 {
   font-weight: 400;
 }
 .navigation {
-  min-height: 60px;
-  padding: 10px;
+  height: 66px;
+  width: 390px;
+  padding: 0;
   /* border: 1px solid red; */
-  display: grid;
-  grid-template-columns: 100px 500px 600px;
-  column-gap: 0px;
+  /* display: flex;
+  justify-content: space-around;
+  align-items: center; */
+
 }
-@media (max-width: 700px) {
-  .navigation  {
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 
-    display: grid;
-    grid-template-columns: repeat(1, 300px);
-
-    gap: 0px;
-  }
+}
+.number {
+  position: absolute;
+width: 20px;
+height: 20px;
+left: 24px;
+top: 15px;
 }
 
-.grid-h {
+.h {
+  position: absolute;
+  /* width: 1200px;
   display: grid;
   grid-template-columns: 1fr 400px 400px ;
-  column-gap: 0px;
+  column-gap: 0px; */
+}
+.grid-h {
+  position: relative;
+  width: 1200px;
+  display: grid;
+  grid-template-columns: 500px 350px 350px ;
+  /* column-gap: 10px; */
+  margin: 0 auto;
 }
 @media (max-width: 700px) {
   .grid-h {
@@ -180,28 +206,45 @@ h1 {
   /* border: 2px solid maroon; */
   margin: 0px;
   padding: 5px;
+  display: flex;
+  align-items: center;
 
 }
 .navigation-list {
   margin-left: 10px;
-  margin-top: 10px;
-  padding-bottom: 00px;
+  margin-top: 0;
+  padding-bottom: 0;
   /* border: 1px solid green; */
- height: 2rem;
+ height: 60px;
+ display: flex;
+ gap: 0 40px;
+  justify-content: space-around;
+  align-items: center;
 
+}
+.logo {
+  width: 200px;
 }
 .flex-container {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
    align-items: center;
 }
-.flex-container-icon {
-  margin-top: 40px;
+.flex-container-controls {
+  margin-top: 0;
   display: flex;
-  flex-wrap: nowrap;
+  gap: 0 30px;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: fcenter;
+  align-items: center;
+}
+.flex-container-header {
+  margin-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 .navigation-item {
 
@@ -210,12 +253,51 @@ h1 {
 
 }
 .navigation-link {
-  width: 100px;
+  width: 93px;
+  height: 26px;
+
   margin: 0px;
   padding: 5px;
   /* background-color: tomato; */
   display: block;
   font-weight: 700;
+}
+.navigation-link__current {
+  position: relative;
+}
+.navigation-link__current::before {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-color: grey;
+  position: absolute;
+  bottom: -10px;
+}
+
+.controls-button {
+  position: relative;
+  width: 50px;
+  height: 66px;
+  background-color: transparent;
+  border: none;
+}
+.btn {
+  position: absolute;
+width: 160px;
+height: 37px;
+right: 70px;
+top: 14px;
+  width: 160px;
+  height: 37px;
+  border: none;
+	padding: 14px 0;
+	border-radius: 2px;
+	font-weight: 700;
+	color: #fff;
+
+	background-color: brown;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
 }
 .navigation-logo {
  width: 155px;
@@ -229,17 +311,18 @@ h1 {
   margin-right: 0px;
   /* border: 1px solid black; */
 }
-.list-icon {
- /* min-width: 300px; */
-  margin-left: 50px;
-  margin-bottom: 5px;
+.controls {
+  position: relative;
+  width: 600px;
+  margin-left: 0;
+  margin-bottom: 0;
 
 }
 .hero {
   display: block;
   margin-top: 10px;
   height: auto;
-  max-width: 1200px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
 
@@ -258,46 +341,42 @@ h1 {
   margin: 0; /*Сбрасываем настройки браузера*/
 }
 
-.wrap {
-  position:fixed; /*Отсоединяем контейнер от страницы и фиксируем в окне браузера*/
-  width: 100%;   /*Ширина на все окно браузера*/
-  min-height: 100%;  /*Высота на все окно браузера*/
-  /* background-color: pink; */
-  display: flex; /*Превращаем контейнер в flexBox*/
-  flex-direction: column; /*Расставляем дочерние элементы по вертикали*/
-}
+
 
 .header{
-  min-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  min-height: 60px;
-  /* background-color: burlywood; */
-  flex-grow: 0; /*Запрещаем увеличиваться*/
-  flex-shrink: 0; /*Запрещаем сжиматься*/
-  flex-basis: auto;
+  /* position: absolute; */
+  /* top: 32px;
+  left: 44px;
+  right: 44px; */
+  width: 1200px;
+  margin: 0 auto;
+
+  height: 70px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  flex-wrap: wrap;
+
+
+
 }
 
-.content {
-    flex: 1 1 auto;
-    /* background-color: aliceblue; */
-    overflow-y:auto; /*Вертикальная полоса прокрутки для текста*/
-    padding: 0px; /*отступы текста со всех сторон*/
-    text-align: justify; /*выравнивание текста по левому и правому краям*/
-    /* flex-grow: 1; Предписываем занять все свободное пространство */
-}
+
 
 .footer {
+  width: 1200px;
   height: 120px;
-  /* background-color: cadetblue; */
-  /* flex-grow: 1; Запрещаем увеличиваться */
-  flex-shrink: 0; /*Запрещаем сжиматься*/
-  flex-basis: auto;
+  margin: 0 auto;
 }
 .mt-5 {
   margin-top: 5px;
 }
 .newsletter-content {
+  margin: 0 auto;
+  width: 1200px;
   min-height: 411px;
 	background-image: url("./../img/background.jpg");
 	background-size: cover;
@@ -306,11 +385,15 @@ h1 {
 
 }
 .newsletter-content02 {
+  width: 1200px;
  min-height: 485px;
+ margin: 0 auto;
 
 
 }
 .newsletter-content-h {
+  width: 1200px;
+  margin: 0 auto;
  min-height: 485px;
  margin-top: -20px;
 
@@ -320,10 +403,10 @@ h1 {
 	background-position: center;
 
 }
-.wrap {
+/* .wrap {
   width: 1050px;
   height: 200px;
-}
+} */
 .white {
   padding-top: 150px;
   color: whitesmoke;
@@ -440,18 +523,21 @@ h1 {
   margin-top: 20px;
 }
 .pg {
-  /* position: relative; */
+  position: relative;
   height: 417px;
-  max-width: 1200px;
+  width: 1200px;
 }
 .pg-wr {
-  margin: 0 auto;
+  position: absolute;
+  margin-top: -300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .center {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate (-50% -50%);
+  transform: translate (-50%, -50%);
 }
 .title-pg {
   margin-top: 200px;
@@ -960,8 +1046,9 @@ a {
   background-color: #82b3d3;
 }
 .pagination-container {
-  width: 100%;
+  width: 1200px;
 	display: grid;
+  margin: 0 auto;
 	grid-gap: 0px;
 	grid-template-columns:  repeat(2, 1fr);
 

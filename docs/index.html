@@ -23,65 +23,67 @@
    <link rel="stylesheet" href="navigation-outline.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <!-- <script src="jquery.js"></script> -->
+
     <title>sedona</title>
   </head>
   <body>
-    <!--  -->
-    <!-- <div class="wrap">
-      <div class="header">
-       </div>
-       <div class="content">
-          <p>
-                Здесь нужно разместить длинный текст
-          </p>
-      </div>
-       <div class="footer">
-      </div>
-  </div> -->
-<!--  -->
 
-<!-- <div class="header"> -->
-    <nav class="navigation ">
-    <div class="navigation-logo ">
-      <a class="logo" href="#">
+
+<header class="header ">
+
+    <div class="logo flex-container">
+      <a class="logo flex-container" href="#">
         <img  src="img/logo.png" alt="Логотип Hiking Club" width="105" height="42">
       </a>
-     </div>
-    <div class="navigation-list ">
-    <ul class="list-item flex-container">
-    <li class="navigation-item">
-      <a class="navigation-link current" href="#">Главная</a>
-    </li>
-    <li class="navigation-item">
+    </div>
+  <nav class="navigation ">
+
+    <ul class="navigation-list ">
+       <li class="navigation-item">
+       <a class="navigation-link navigation-link__current" href="#">Главная</a>
+        </li>
+       <li class="navigation-item">
       <a class="navigation-link" href="#">О Седоне</a>
-    </li>
-    <li class="navigation-item">
+       </li>
+      <li class="navigation-item">
       <a class="navigation-link" href="./index_hotels.html">Гостиницы</a>
     </li>
   </ul>
-  </div>
-  <div class="navigation-list-icon ">
-  <ul class="list-icon flex-container-icon">
-    <li class="navigation-icon">
-      <a class="navigation-icon-link current" href="#">
-        <img  src="img/p.png" alt="Поиск" width="43" height="66">
-      </a>
+</nav>
+
+
+  <ul class="controls flex-container-controls">
+    <li class="controls-item">
+      <button class="controls-button" type="button">
+        <span class="visually-hidden">Search</span>
+
+        <img  src="img/search.svg" alt="Поиск" width="43" height="66" >
+
+      </button>
+
     </li>
-    <li class="navigation-icon">
-      <a class="navigation-icon-link" href="#">
-        <img  src="img/i.png" alt="Избранное" width="45" height="66">
-      </a>
+    <li class="controls-item">
+      <button class="controls-button" type="button">
+        <span class="visually-hidden">Favorite</span>
+        <img  src="img/favorite.svg" alt="Избранное" width="45" height="66">
+        <img class="number"  src="img/number.svg" alt="Избранное" width="20" height="20">
+
+      </button>
     </li>
-    <li class="navigation-icon">
+    <li class="controls-item">
+
       <a class="navigation-icon-link" href="#popup">
-        <img class="mt-5" src="img/button.png" alt="Избранное" width="160" height="37">
+        <button class="btn" type="button">ХОЧУ СЮДА!
+
+      </button>
       </a>
     </li>
   </ul>
 
 </div>
-</nav>
+
+</header>
+<!-- </nav> -->
 <!-- </div> -->
 <!-- end header -->
 <!-- <div class="content"> -->
@@ -130,23 +132,25 @@
 
 </div>
 
-  <div class="pg">
-  <div class=" pg-wr">
+
+  <div class="pg ">
+   <div class=" pg-wr center">
 
    <h2 class="title-pg " >ЗАИНТЕРЕСОВАЛИСЬ?</h2>
    <h4 class="title grey">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне
    </h4>
    <div class="dummy"></div>
    <div class="title">
-   <a href="#popup"> <button class=" search__btn"><span class="white-p">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</span></button></a>
+   <a href="./index_hotels.html"> <button class=" search__btn"><span class="white-p">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</span></button></a>
    </div>
+
 
   </div>
   </div>
 <!-- end content -->
 
 <!-- <div class="footer"> -->
-  <div class="newsletter-content">
+  <div class="newsletter-content ">
     <div class="title  ">
       <h2 class="white">Подпишитесь на рассылку</h2>
       <p class="white-p">
@@ -179,10 +183,10 @@
   <a href="https://htmlacademy.ru/">
   <div class="logo_h title flex-container-social"><img  src="img/logo_htmlacademy.png" alt="Избранное" width="115"  min-height="34"></div>
   </a>
-</div>
+  </div>
 
 </div>
-<!-- </div> -->
+</div>
 
 
 <div id="popup" class="popup">

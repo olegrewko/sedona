@@ -26,60 +26,60 @@
     <title>sedona_hotels</title>
   </head>
   <body>
-    <!--  -->
-    <!-- <div class="wrap">
-      <div class="header">
-       </div>
-       <div class="content">
-          <p>
-                Здесь нужно разместить длинный текст
-          </p>
-      </div>
-       <div class="footer">
-      </div>
-  </div> -->
-<!--  -->
-<!-- <div class="header"> -->
-    <nav class="navigation ">
-    <div class="navigation-logo ">
-      <a class="logo" href="#">
-        <img  src="img/logo.png" alt="Логотип Hiking Club" width="105" height="42">
-      </a>
-    </div>
- <div class="navigation-list ">
-  <ul class="list-item flex-container">
-    <li class="navigation-item">
-      <a class="navigation-link current" href="./index.html">Главная</a>
-    </li>
-    <li class="navigation-item">
-      <a class="navigation-link" href="#">О Седоне</a>
-    </li>
-    <li class="navigation-item">
-      <a class="navigation-link" href="">Гостиницы</a>
-    </li>
-  </ul>
- </div>
-  <div class="navigation-list-icon ">
-  <ul class="list-icon flex-container-icon">
-    <li class="navigation-icon">
-      <a class="navigation-icon-link current" href="#">
-        <img  src="img/p.png" alt="Поиск" width="43" height="66">
-      </a>
-    </li>
-    <li class="navigation-icon">
-      <a class="navigation-icon-link" href="#">
-        <img  src="img/i.png" alt="Избранное" width="45" height="66">
-      </a>
-    </li>
-    <li class="navigation-icon">
-      <a class="navigation-icon-link" href="./index.html">
-        <img class="mt-5" src="img/button.png" alt="Избранное" width="160" height="37">
-      </a>
-    </li>
-  </ul>
+    <header class="header ">
 
-</div>
-</nav>
+      <div class="logo flex-container">
+        <a class="logo flex-container" href="#">
+          <img  src="img/logo.png" alt="Логотип Hiking Club" width="105" height="42">
+        </a>
+      </div>
+    <nav class="navigation ">
+
+      <ul class="navigation-list ">
+         <li class="navigation-item">
+         <a class="navigation-link navigation-link__current" href="./index.html">Главная</a>
+          </li>
+         <li class="navigation-item">
+        <a class="navigation-link" href="#">О Седоне</a>
+         </li>
+        <li class="navigation-item">
+        <a class="navigation-link" href="./index_hotels.html">Гостиницы</a>
+      </li>
+    </ul>
+  </nav>
+
+
+    <ul class="controls flex-container-controls">
+      <li class="controls-item">
+        <button class="controls-button" type="button">
+          <span class="visually-hidden">Search</span>
+
+          <img  src="img/search.svg" alt="Поиск" width="43" height="66" >
+
+        </button>
+
+      </li>
+      <li class="controls-item">
+        <button class="controls-button" type="button">
+          <span class="visually-hidden">Favorite</span>
+          <img  src="img/favorite.svg" alt="Избранное" width="45" height="66">
+          <img class="number"  src="img/number.svg" alt="Избранное" width="20" height="20">
+
+        </button>
+      </li>
+      <li class="controls-item">
+
+        <a class="navigation-icon-link" href="#popup">
+          <button class="btn" type="button">ХОЧУ СЮДА!
+
+        </button>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+
+  </header>
 <!-- </div> -->
 <!-- end header -->
 <!-- <div class="content"> -->
@@ -159,19 +159,20 @@
   </div>
 
 
-<div class="grid-h">
+<div class="grid-h ">
+<!-- <div class="h "> -->
 
    <div>
     <h1 class="title-h">НАЙДЕНО ГОСТИННИЦ: 38</h1>
     </div>
 
     <div class="select-h">
-    <select class="select-hc">
+     <select class="select-hc">
       <option>Сначала дешевые</option>
       <option>Сыроежкин</option>
       <option>Чижиков</option>
       <option>Кукушкина</option>
-    </select>
+     </select>
     </div>
 
     <div class="button-h">
@@ -180,6 +181,7 @@
       <img src="img/View03.png" alt="View01.png" >
     </div>
 
+<!-- </div> -->
 </div>
 
 <div class="container">
@@ -284,6 +286,7 @@
 
     </div>
   </div>
+
   <div class="pagination-container">
 
   <div class="pagination">
@@ -307,10 +310,12 @@
     </select>
 
   </div>
+
 </div>
 
-<hr>
+
 <div class="newsletter-content02">
+  <hr>
   <div class="title  ">
     <h2 class="black">Подпишитесь на рассылку</h2>
     <p class="black-p">
